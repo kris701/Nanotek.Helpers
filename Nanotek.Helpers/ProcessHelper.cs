@@ -5,12 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Management;
+using System.Runtime.Versioning;
 
+[assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("windows")]
 namespace Nanotek.Helpers
 {
     public static class ProcessHelper
     {
-        [SupportedOSPlatform("windows")]
         public static void KillProcessAndChildrens(int pid)
         {
             ManagementObjectSearcher processSearcher = new ManagementObjectSearcher
