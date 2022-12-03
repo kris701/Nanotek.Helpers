@@ -10,6 +10,7 @@ namespace Nanotek.Helpers
 {
     public static class ProcessHelper
     {
+        [SupportedOSPlatform("windows")]
         public static void KillProcessAndChildrens(int pid)
         {
             ManagementObjectSearcher processSearcher = new ManagementObjectSearcher
