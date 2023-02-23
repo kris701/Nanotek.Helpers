@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 using System.Management;
 using System.Runtime.Versioning;
 
-[assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("windows")]
 namespace Nanotek.Helpers
 {
+    [SupportedOSPlatform("windows")]
     public static class ProcessHelper
     {
         public static void KillProcessAndChildrens(int pid)
