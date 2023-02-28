@@ -10,11 +10,12 @@
 	  <Description>A collection of general helper classes.</Description>
 	  <RepositoryUrl>https://github.com/kris701/Nanotek.Helpers</RepositoryUrl>
 	  <PackageReadmeFile>README.md</PackageReadmeFile>
+	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
 	<PropertyGroup>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-		<Version>1.0.6</Version>
+		<Version>1.0.7</Version>
 	</PropertyGroup>
 
 	<ItemGroup>

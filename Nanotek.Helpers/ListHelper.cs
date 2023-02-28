@@ -17,7 +17,7 @@ namespace Nanotek.Helpers
         /// Shuffles all the data that is in the given <paramref name="list"/>.
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        /// <param name="list">A list of type <seealso cref="T"/></param>
+        /// <param name="list">A list of type T/>/></param>
         public static void Shuffle<T>(IList<T> list)
         {
             int n = list.Count;
