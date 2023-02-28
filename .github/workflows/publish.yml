@@ -12,9 +12,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@master
-          
-      - name: Run Tests
-        run: dotnet test
+      - name: Install dependencies
+        run: dotnet restore
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+      - name: Test
+        run: dotnet test --no-restore --verbosity normal
 
   BuildAndPublish:
     needs: BuildAndTest
