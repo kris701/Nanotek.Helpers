@@ -1,4 +1,4 @@
-name: NuGet Generation
+name: Publish Workflow
 
 on:
   push:
@@ -6,11 +6,22 @@ on:
       - main
 
 jobs:
+  test:
+    runs-on: windows-latest
+    name: Run Tests
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@master
+          
+      - name: Build and Publish
+        run: |  
+          dotnet build
+          dotnet test
+
   build:
     runs-on: windows-latest
     name: Update NuGet 
     steps:
-
       - name: Checkout repository
         uses: actions/checkout@master
           
@@ -19,7 +30,6 @@ jobs:
           cd Nanotek.Helpers
           dotnet nuget add source --username kris701 --password ${{ secrets.API_KEY_GITHUB }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/kris701/index.json"
           dotnet build --configuration Release
-          dotnet test --configuration Release
           dotnet pack --configuration Release
           cd bin
           cd Release
