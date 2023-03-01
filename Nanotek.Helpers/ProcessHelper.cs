@@ -9,6 +9,10 @@ using System.Runtime.Versioning;
 
 namespace Nanotek.Helpers
 {
+    /// <summary>
+    /// A helper class to make it easier to work with windows process'
+    /// </summary>
+    /// <remarks>Windows Only</remarks>
     [SupportedOSPlatform("windows")]
     public static class ProcessHelper
     {
